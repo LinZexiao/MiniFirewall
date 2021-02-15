@@ -94,7 +94,7 @@ mfw_general_filter(void *priv, struct sk_buff *skb,
 		if(!IGNORE(r->s_port) && (r->s_port != s_port))
 			continue;
 
-		if(!IGNORE(r->d_ip) && !EQUAL_NET_ADDR(r->d_ip, d_ip, r->s_mask))
+		if(!IGNORE(r->d_ip) && !EQUAL_NET_ADDR(r->d_ip, d_ip, r->d_mask))
 			continue;
 
 		if(!IGNORE(r->d_port) && (r->d_port != d_port))
